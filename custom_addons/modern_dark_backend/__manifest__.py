@@ -1,7 +1,7 @@
 {
     "name": "Modern Graphite Light Backend",
     "summary": "Navegação grafite moderna com área de trabalho clara",
-    "version": "19.0.1.1.0",
+    "version": "19.0.1.2.0",
     "category": "Themes/Backend",
     "author": "Renatto Attiê Lima",
     "license": "LGPL-3",
@@ -9,6 +9,9 @@
     "assets": {
         "web.assets_backend": [
             "modern_dark_backend/static/src/scss/backend.scss",
+        ],
+        "web.assets_frontend": [
+            "modern_dark_backend/static/src/scss/login.scss",
         ],
     },
     "installable": True,

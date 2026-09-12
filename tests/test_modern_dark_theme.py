@@ -17,6 +17,21 @@ class ModernDarkThemeTests(unittest.TestCase):
             "modern_dark_backend/static/src/scss/backend.scss",
             manifest["assets"]["web.assets_backend"],
         )
+        self.assertIn(
+            "modern_dark_backend/static/src/scss/login.scss",
+            manifest["assets"]["web.assets_frontend"],
+        )
+
+    def test_login_uses_graphite_card_without_affecting_other_pages(self):
+        stylesheet = MODULE / "static" / "src" / "scss" / "login.scss"
+        self.assertTrue(stylesheet.exists(), "folha de estilo do login ainda não existe")
+        css = stylesheet.read_text(encoding="utf-8")
+        self.assertIn("body:has(.o_database_list)", css)
+        self.assertIn(".o_database_list", css)
+        self.assertIn(".oe_login_form", css)
+        self.assertIn("#15171b", css)
+        self.assertIn("linear-gradient", css)
+        self.assertNotIn("width: min(", css)
 
     def test_styles_use_graphite_chrome_and_keep_workspace_light(self):
         stylesheet = MODULE / "static" / "src" / "scss" / "backend.scss"
