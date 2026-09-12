@@ -1,0 +1,204 @@
+/* Modern Graphite — backend discreto, contemporâneo e legível. */
+
+$graphite-950: #111318;
+$graphite-900: #17191f;
+$graphite-850: #1b1e24;
+$graphite-800: #23262d;
+$graphite-700: #343841;
+$graphite-500: #777d88;
+$graphite-300: #b8bcc5;
+$graphite-200: #d7d9df;
+$graphite-100: #eceef2;
+$accent: #9da3ae;
+
+body.o_web_client {
+    --o-brand-primary: #{$accent};
+    --o-action: #{$graphite-300};
+    color: $graphite-200;
+    background: $graphite-950;
+
+    .o_main_navbar {
+        color: $graphite-100;
+        background: linear-gradient(90deg, #0d0f13 0%, $graphite-850 100%);
+        border-bottom: 1px solid $graphite-700;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, .28);
+
+        .o_menu_toggle,
+        .o_menu_brand,
+        .o_nav_entry,
+        .dropdown-toggle,
+        .o_menu_systray .btn {
+            color: $graphite-100;
+        }
+
+        .o_nav_entry:hover,
+        .dropdown-toggle:hover,
+        .dropdown.show > .dropdown-toggle {
+            color: #fff;
+            background: rgba(255, 255, 255, .09);
+        }
+    }
+
+    .o_action_manager,
+    .o_content {
+        color: $graphite-200;
+        background: $graphite-950;
+    }
+
+    .o_control_panel {
+        color: $graphite-200;
+        background: rgba(27, 30, 36, .97);
+        border-bottom: 1px solid $graphite-700;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, .2);
+
+        .breadcrumb,
+        .breadcrumb-item,
+        .o_breadcrumb .active {
+            color: $graphite-100;
+        }
+    }
+
+    .o_form_view,
+    .o_list_view,
+    .o_kanban_view,
+    .o_settings_container,
+    .o_form_sheet_bg {
+        color: $graphite-200;
+        background: $graphite-950;
+    }
+
+    .o_form_sheet_bg > .o_form_sheet,
+    .o_kanban_record,
+    .card,
+    .o_dialog .modal-content,
+    .modal-content,
+    .offcanvas,
+    .dropdown-menu {
+        color: $graphite-200;
+        background: $graphite-850;
+        border: 1px solid $graphite-700;
+        border-radius: 12px;
+        box-shadow: 0 12px 34px rgba(0, 0, 0, .3);
+    }
+
+    .o_list_renderer .o_list_table {
+        color: $graphite-200;
+        background: $graphite-900;
+
+        thead,
+        thead th {
+            color: $graphite-300;
+            background: $graphite-850;
+            border-color: $graphite-700;
+        }
+
+        tbody tr,
+        tbody td {
+            color: $graphite-200;
+            background: $graphite-900;
+            border-color: $graphite-800;
+        }
+
+        tbody tr:hover > td {
+            background: $graphite-800;
+        }
+    }
+
+    .form-control,
+    .o_input,
+    .o_field_widget input,
+    .o_field_widget textarea,
+    .o_field_widget select {
+        color: $graphite-100;
+        background-color: $graphite-800;
+        border-color: $graphite-700;
+        border-radius: 8px;
+
+        &:focus {
+            color: #fff;
+            background-color: #292d35;
+            border-color: $graphite-300;
+            box-shadow: 0 0 0 .2rem rgba(184, 188, 197, .16);
+        }
+
+        &::placeholder {
+            color: $graphite-500;
+        }
+    }
+
+    .btn {
+        border-radius: 8px;
+        transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+
+        &:hover {
+            transform: translateY(-1px);
+        }
+    }
+
+    .btn-primary {
+        color: $graphite-950;
+        background: $graphite-200;
+        border-color: $graphite-200;
+        box-shadow: 0 5px 14px rgba(0, 0, 0, .22);
+
+        &:hover,
+        &:focus {
+            color: #000;
+            background: #fff;
+            border-color: #fff;
+        }
+    }
+
+    .btn-secondary,
+    .btn-light {
+        color: $graphite-200;
+        background: $graphite-800;
+        border-color: $graphite-700;
+    }
+
+    a,
+    .btn-link,
+    .o_field_widget.o_field_many2one .o_external_button {
+        color: $graphite-300;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .nav-tabs {
+        border-color: $graphite-700;
+
+        .nav-link {
+            color: $graphite-300;
+            border-radius: 8px 8px 0 0;
+
+            &.active {
+                color: #fff;
+                background: $graphite-800;
+                border-color: $graphite-700;
+            }
+        }
+    }
+
+    .o_Chatter,
+    .o-mail-Discuss,
+    .o-mail-Chatter,
+    .o-mail-Message {
+        color: $graphite-200;
+        background-color: $graphite-900;
+    }
+
+    .text-muted,
+    .o_form_label,
+    .form-label {
+        color: $graphite-300 !important;
+    }
+
+    hr,
+    .border,
+    .border-top,
+    .border-bottom {
+        border-color: $graphite-700 !important;
+    }
+}

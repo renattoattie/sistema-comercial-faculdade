@@ -32,6 +32,7 @@ services:
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./deploy/odoo.runtime.conf:/etc/odoo/odoo.conf:ro
+      - ./custom_addons:/mnt/custom-addons:ro
       - ./addons:/mnt/extra-addons:ro
 
 volumes:

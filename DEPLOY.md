@@ -12,6 +12,9 @@ Implantação local com Docker Compose, PostgreSQL 16 e Odoo 19 Community.
 5. Suba o Odoo: `docker compose up -d odoo`.
 6. Acesse `http://127.0.0.1:8069`.
 
+O módulo `modern_dark_backend` aplica o tema administrativo Modern Graphite,
+com navegação preta, superfícies em cinza grafite e controles de alto contraste.
+
 O arquivo `.env` é ignorado pelo Git e não deve ser versionado. O túnel rápido da Cloudflare é temporário: sua URL muda quando o processo é reiniciado.
 
 ## Parar
