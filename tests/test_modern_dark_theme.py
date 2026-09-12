@@ -18,14 +18,18 @@ class ModernDarkThemeTests(unittest.TestCase):
             manifest["assets"]["web.assets_backend"],
         )
 
-    def test_styles_cover_navigation_workspace_and_controls(self):
+    def test_styles_use_graphite_chrome_and_keep_workspace_light(self):
         stylesheet = MODULE / "static" / "src" / "scss" / "backend.scss"
         self.assertTrue(stylesheet.exists(), "folha de estilo do tema ainda não existe")
         css = stylesheet.read_text(encoding="utf-8")
-        for selector in (".o_main_navbar", ".o_action_manager", ".o_control_panel", ".btn-primary"):
+        for selector in (".o_main_navbar", ".o_control_panel", ".btn-primary"):
             self.assertIn(selector, css)
-        for color in ("#111318", "#1b1e24", "#d7d9df"):
+        for color in ("#15171b", "#343942", "#f6f7f9"):
             self.assertIn(color, css)
+        self.assertNotIn(".o_action_manager,", css)
+        self.assertNotIn(".o_list_renderer .o_list_table", css)
+        self.assertNotIn(".o-mail-Discuss", css)
+        self.assertNotIn(".o_form_sheet_bg > .o_form_sheet", css)
 
     def test_runtime_loads_custom_addons_before_upstream(self):
         compose = (ROOT / "compose.yaml").read_text(encoding="utf-8")
